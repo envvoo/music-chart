@@ -1,0 +1,11 @@
+.chart__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.chart__title {
+  color: black;
+  font-size: 18px;
+  font-weight: 900;
+}

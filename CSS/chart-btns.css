@@ -1,0 +1,17 @@
+.chart-btn {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+
+.chart-btn__col {
+  color: black;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.shuffle {
+  border: 1px solid black;
+  border-bottom-width: 3px;
+  border-radius: 20px;
+}

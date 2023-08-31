@@ -1,0 +1,137 @@
+@import "reset.css";
+@import "chart-header.css";
+@import "chart-btns.css";
+
+@import "artist.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-style {
+  text-decoration: none;
+}
+
+.overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 차트 */
+.chart {
+  width: 350px;
+}
+
+.chart__standardTime {
+  color: rgb(100, 100, 100);
+}
+
+.chart--wrap {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.chart__list {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid black;
+}
+
+.chart__item {
+  width: 33.3%;
+  text-align: center;
+}
+
+.chart__item--link {
+  color: black;
+  display: block;
+  padding: 5px 10px;
+  font-weight: 600;
+}
+
+/* 랭킹 */
+.ranking {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.ranking__list {
+  counter-reset: item;
+}
+
+.ranking__item {
+  counter-increment: item;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+}
+
+.ranking__item::before {
+  content: counter(item);
+  width: 20%;
+  text-align: center;
+}
+
+.ranking__wrap {
+  width: 70%;
+}
+
+/* 현재 페이지 */
+.currentPage-link {
+  color: white;
+  background-color: black;
+  border-bottom: 1px dashed white;
+}
+
+/* 프리셋 */
+.preset {
+  width: 100%;
+  display: flex;
+}
+
+.ranking__title {
+  display: block;
+  width: 70%;
+}
+
+.ranking__artist {
+  text-align: right;
+  width: 30%;
+}
+
+/* 액티브 */
+.active {
+  display: none;
+}
+
+.active__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.ranking__title--active {
+  font-weight: 600;
+  color: white;
+}
+
+.ranking__title--active,
+.ranking__artist--active {
+  text-align: left;
+}
+
+.ranking__artist--active {
+  color: rgb(150, 150, 150);
+  display: block;
+  margin-top: 8px;
+}
