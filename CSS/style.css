@@ -77,7 +77,7 @@ body {
 
 .ranking__item::before {
   content: counter(item);
-  width: 10%;
+  width: 15%;
   text-align: center;
 }
 
@@ -119,13 +119,12 @@ body {
   flex-direction: column;
   justify-content: center;
   margin-left: 10px;
+  width: 180px;
 }
 
 .ranking__title--active {
   font-weight: 600;
   color: white;
-  display: block;
-  width: 180px;
 }
 
 .ranking__artist--active {
