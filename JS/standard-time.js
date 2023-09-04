@@ -3,7 +3,7 @@ const standard = document.querySelector(".chart__standardTime");
 function getTime() {
   const standardTime = new Date();
   const standardYear = standardTime.getFullYear();
-  const standardMonth = standardTime.getMonth();
+  const standardMonth = standardTime.getMonth() + 1;
   const standardDate = standardTime.getDate();
   const standardHour = standardTime.getHours();
 
