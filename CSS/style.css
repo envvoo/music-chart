@@ -124,11 +124,8 @@ body {
 .ranking__title--active {
   font-weight: 600;
   color: white;
-}
-
-.ranking__title--active,
-.ranking__artist--active {
-  text-align: left;
+  display: block;
+  width: 180px;
 }
 
 .ranking__artist--active {
