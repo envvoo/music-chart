@@ -6,6 +6,10 @@ function getTime() {
   const standardMonth = standardTime.getMonth() + 1;
   const standardDate = standardTime.getDate();
   const standardHour = standardTime.getHours();
+  const strMonth = String(standardTime.getMonth() + 1);
+  const standardMonth = strMonth.length == 1 ? 0 + strMonth : strMonth;
+  const strDate = String(standardTime.getDate());
+  const standardDate = strDate.length == 1 ? 0 + strDate : strDate;
 
   standard.innerHTML = `${standardYear}.${standardMonth}.${standardDate}`;
 
