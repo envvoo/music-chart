@@ -1,29 +1,33 @@
 const items = Array.from(document.querySelectorAll(".ranking__item"));
 
-for (const item of items) {
-  const eventIdx = items.indexOf(item);
-
-  const onActive = () => {
-    let preset = item.childNodes[1].children[0];
-    let active = item.childNodes[1].children[1];
-
-    preset.style.display = "none";
-    active.style.display = "flex";
-
-    onPreset();
-  };
-
-  const onPreset = () => {
-    for (const remain of items) {
-      let preset = remain.childNodes[1].children[0];
-      let active = remain.childNodes[1].children[1];
-
-      if (items.indexOf(remain) != eventIdx) {
-        preset.style.display = "flex";
-        active.style.display = "none";
-      }
+function findActive() {
+  for (const item of items) {
+    if (item.childNodes[1].children[1].style.display == "flex") {
+      let previous = items.indexOf(item);
+      return previous;
     }
-  };
-
-  item.addEventListener("mouseenter", onActive);
+  }
 }
+
+function onChangeMode(item) {
+  let previous = findActive();
+  let current = items.indexOf(item.target);
+
+  if (previous !== current) {
+    const currentPreset = item.target.childNodes[1].children[0];
+    const currentActive = item.target.childNodes[1].children[1];
+
+    const previousPreset = items[previous].childNodes[1].children[0];
+    const previousActive = items[previous].childNodes[1].children[1];
+
+    currentPreset.style.display = "none";
+    currentActive.style.display = "flex";
+
+    previousPreset.style.display = "flex";
+    previousActive.style.display = "none";
+  }
+
+  previous = current;
+}
+
+items.forEach((item) => item.addEventListener("mouseenter", onChangeMode));
