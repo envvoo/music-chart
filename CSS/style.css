@@ -50,6 +50,10 @@ body {
   text-align: center;
 }
 
+.chart__item:not(:last-child) {
+  border-right: 1px solid black;
+}
+
 .chart__item--link {
   color: black;
   display: block;
@@ -89,7 +93,6 @@ body {
 .currentPage-link {
   color: white;
   background-color: black;
-  border-bottom: 1px dashed white;
 }
 
 /* 프리셋 */
