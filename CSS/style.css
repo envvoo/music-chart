@@ -46,7 +46,7 @@ body {
 }
 
 .chart__item {
-  width: 34%;
+  width: calc(350px / 3);
   text-align: center;
 }
 
