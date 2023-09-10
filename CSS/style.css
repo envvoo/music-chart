@@ -113,6 +113,10 @@ body {
 }
 
 /* 액티브 */
+.ranking__item.highlight::before {
+  font-size: 24px;
+}
+
 .active {
   display: none;
 }

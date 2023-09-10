@@ -22,9 +22,11 @@ function onChangeMode(item) {
 
     currentPreset.style.display = "none";
     currentActive.style.display = "flex";
+    item.target.classList.add("highlight");
 
     previousPreset.style.display = "flex";
     previousActive.style.display = "none";
+    items[previous].classList.remove("highlight");
   }
 
   previous = current;
